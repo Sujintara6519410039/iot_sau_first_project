@@ -63,7 +63,7 @@ class _SignupUiState extends State<SignupUi> {
               ),
               ),
               SizedBox( 
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               TextField( 
                 decoration: InputDecoration( 
@@ -92,7 +92,7 @@ class _SignupUiState extends State<SignupUi> {
                 ),
               ),
              SizedBox( 
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               TextField( 
                 keyboardType: TextInputType.emailAddress,
@@ -122,7 +122,7 @@ class _SignupUiState extends State<SignupUi> {
                 ),
               ),
               SizedBox( 
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               TextField( 
                 decoration: InputDecoration( 
@@ -151,7 +151,7 @@ class _SignupUiState extends State<SignupUi> {
                 ),
               ), 
               SizedBox( 
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               TextField( 
                 decoration: InputDecoration( 
@@ -179,6 +179,9 @@ class _SignupUiState extends State<SignupUi> {
                   ),
                 ),
               ),
+               SizedBox( 
+                height: MediaQuery.of(context).size.height * 0.01,
+                ),
               ElevatedButton(
                   onPressed: () {},
                   child: Text(
