@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:iot_sau_first_project/views/login_ui.dart';
+import 'package:iot_sau_first_project/views/signup_ui.dart';
 
 class WelcomeUi extends StatefulWidget {
   const WelcomeUi({super.key});
@@ -46,7 +48,15 @@ return Scaffold(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () { 
+                    //เปิดแบบย้อนกลับได้
+                    Navigator.push( 
+                      context,
+                      MaterialPageRoute( 
+                        builder: (context) => LoginUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Login',
                     style: TextStyle(
@@ -70,7 +80,14 @@ return Scaffold(
                   width: MediaQuery.of(context).size.width * 0.035,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () { 
+                    Navigator.push( 
+                      context,
+                      MaterialPageRoute( 
+                        builder: (context) => SignupUi(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'Sign Up',
                     style: TextStyle(

@@ -1,18 +1,19 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SignupUi extends StatefulWidget {
-  const SignupUi({super.key});
+class LoginUi extends StatefulWidget {
+  const LoginUi({super.key});
 
   @override
-  State<SignupUi> createState() => _SignupUiState();
+  State<LoginUi> createState() => _LoginUiState();
 }
 
-class _SignupUiState extends State<SignupUi> {
+class _LoginUiState extends State<LoginUi> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      backgroundColor: Colors.white,
-      body: Padding(
+    return  Scaffold( 
+       backgroundColor: Colors.white,
+       body: Padding(
         padding: EdgeInsets.only(
           left: 45.0,
           right: 45.0,
@@ -39,15 +40,15 @@ class _SignupUiState extends State<SignupUi> {
                 alignment: Alignment.centerLeft,
                 child: Image.asset( 
                   'assets/images/logo.png',
-                  height: MediaQuery.of(context).size.height * 0.2,
+                  height: MediaQuery.of(context).size.height * 0.25,
                 ),
               ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text( 
-                  'Get On Board',
+                  'Welcome Back',
                   style: TextStyle( 
-                    fontSize: MediaQuery.of(context).size.height * 0.02,
+                    fontSize: MediaQuery.of(context).size.height * 0.038,
                     fontWeight: FontWeight.bold
                   ),
                 ),
@@ -55,7 +56,7 @@ class _SignupUiState extends State<SignupUi> {
               Align( 
                 alignment: Alignment.centerLeft,
                 child: Text( 
-                'Create tour profile to start your Journey,',
+                'Make it Work, make it right, make it fast,',
                  style: TextStyle( 
                     fontSize: MediaQuery.of(context).size.height * 0.017,
                     fontWeight: FontWeight.bold
@@ -63,36 +64,7 @@ class _SignupUiState extends State<SignupUi> {
               ),
               ),
               SizedBox( 
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              TextField( 
-                decoration: InputDecoration( 
-                  enabledBorder: OutlineInputBorder( 
-                    borderSide: BorderSide( 
-                      color: const Color.fromARGB(255, 110, 109, 109)
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide( 
-                      color: const Color.fromARGB(255, 110, 109, 109)
-                    ),
-                  ),
-                  prefixIcon: Icon( 
-                    Icons.person_2_outlined,
-                    color: Colors.grey[600],
-                  ),
-                  hintText: 'Full Name',
-                  hintStyle: TextStyle( 
-                    color: Colors.grey[600],
-                  ),
-                  isCollapsed: true,
-                  contentPadding: EdgeInsets.symmetric( 
-                    vertical: 25.0,
-                  ),
-                ),
-              ),
-             SizedBox( 
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               TextField( 
                 keyboardType: TextInputType.emailAddress,
@@ -108,7 +80,7 @@ class _SignupUiState extends State<SignupUi> {
                     ),
                   ),
                   prefixIcon: Icon( 
-                    Icons.email_outlined,
+                    Icons.person_2_outlined,
                     color: Colors.grey[600],
                   ),
                   hintText: 'E-Mail',
@@ -137,36 +109,7 @@ class _SignupUiState extends State<SignupUi> {
                     ),
                   ),
                   prefixIcon: Icon( 
-                    Icons.phone_android_outlined,
-                    color: Colors.grey[600],
-                  ),
-                  hintText: 'Phone No',
-                  hintStyle: TextStyle( 
-                    color: Colors.grey[600],
-                  ),
-                  isCollapsed: true,
-                  contentPadding: EdgeInsets.symmetric( 
-                    vertical: 25.0,
-                  ),
-                ),
-              ), 
-              SizedBox( 
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              TextField( 
-                decoration: InputDecoration( 
-                  enabledBorder: OutlineInputBorder( 
-                    borderSide: BorderSide( 
-                      color: const Color.fromARGB(255, 110, 109, 109)
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide( 
-                      color: const Color.fromARGB(255, 110, 109, 109)
-                    ),
-                  ),
-                  prefixIcon: Icon( 
-                    Icons.fingerprint_outlined,
+                    Icons.fingerprint,
                     color: Colors.grey[600],
                   ),
                   hintText: 'Password',
@@ -177,7 +120,27 @@ class _SignupUiState extends State<SignupUi> {
                   contentPadding: EdgeInsets.symmetric( 
                     vertical: 25.0,
                   ),
+                  suffixIcon: Icon( 
+                    Icons.visibility,
+                    color: Colors.grey[600],
+                  ),
                 ),
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton( 
+                  onPressed: () {},
+                  child: Text( 
+                    'Forget Password',
+                    style: TextStyle( 
+                      color: Colors.blue,
+                      fontWeight:  FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox( 
+                height: MediaQuery.of(context).size.height * 0.015,
               ),
               ElevatedButton(
                   onPressed: () {},
@@ -247,12 +210,12 @@ class _SignupUiState extends State<SignupUi> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [ 
                     Text( 
-                     'Alredy have an account? '
+                     'Don\t have an account?'
                     ),
                     TextButton( 
                       onPressed: () {},
                       child: Text( 
-                        'LOGIN',
+                        'Signup',
                         style: TextStyle( 
                           color: Colors.blue,
                           fontWeight: FontWeight.bold,
@@ -263,7 +226,7 @@ class _SignupUiState extends State<SignupUi> {
                 ),  
             ],
           ),
-        )
+        ),
       ),
     );
   }
